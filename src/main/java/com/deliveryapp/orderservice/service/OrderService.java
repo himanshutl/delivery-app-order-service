@@ -25,6 +25,7 @@ public class OrderService {
 
     public OrderResponse saveOrderInDb(OrderRequest orderRequest) {
         Long orderId = sequenceGenerator.generateNextOrderId();
+        System.out.println(orderRequest.getRestaurantDto());
 
         UserDto userDto = fetchUserDetailsFromUserId(orderRequest.getUserId());
 
