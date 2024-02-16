@@ -4,13 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RestaurantDto {
-    private long id;
-    private String name;
-    private String address;
-    private String city;
-    private String restaurantDescription;
+public class OrderRequest {
+
+    private long userId;
+    private List<FoodItemDto> foodItemsList;
+    private RestaurantDto restaurantDto;
+
 }
