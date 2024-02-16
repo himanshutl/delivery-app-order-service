@@ -7,10 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RestaurantDto {
+public class UserDto {
     private long id;
-    private String name;
+    private String userName;
+    private String userPassword;
     private String address;
     private String city;
-    private String restaurantDescription;
 }
+
