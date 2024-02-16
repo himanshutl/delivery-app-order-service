@@ -12,7 +12,6 @@ import java.util.List;
 public class OrderResponse {
     private long orderId;
     private List<FoodItemDto> foodItemList;
-    private UserDto userDto;
     private RestaurantDto restaurantDto;
-
+    private UserDto userDto;
 }
