@@ -35,11 +35,13 @@ public class OrderService {
                 userDto
         );
 
-        return modelMapper.map(orderRepository.save(orderToBeSaved), OrderResponse.class);
+        Order savedOrder = orderRepository.save(orderToBeSaved);
+        OrderResponse orderResponse = modelMapper.map(savedOrder, OrderResponse.class);
+        return orderResponse;
     }
 
     private UserDto fetchUserDetailsFromUserId(long userId) {
-        return restTemplate.getForObject("https://USER-SERVICE/user/fetchUserById"+userId,
+        return restTemplate.getForObject("https://USER-SERVICE/user/fetchUserById/"+userId,
                 UserDto.class);
     }
 }
